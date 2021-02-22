@@ -35,10 +35,10 @@ export default function EditPage() {
 
     useEffect(() => {
         dispatch(fetchUser(localStorage.getItem('token')));
-        setProfile(`${process.env.REACT_APP_DO_SPACE_URL}/${profilePic}`);
-        setCover(`${process.env.REACT_APP_DO_SPACE_URL}/${coverPic}`)
-        //setProfile(`/creator_img/${profilePic}`);
-        //setCover(`/creator_img/${coverPic}`)
+        // setProfile(`${process.env.REACT_APP_DO_SPACE_URL}/${profilePic}`);
+        // setCover(`${process.env.REACT_APP_DO_SPACE_URL}/${coverPic}`)
+        setProfile(`/creator_img/${profilePic}`);
+        setCover(`/creator_img/${coverPic}`)
     }, [dispatch])
 
     return (

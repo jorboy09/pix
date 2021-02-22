@@ -85,24 +85,24 @@ function App() {
           >
             {isCreator ? <CreatorLeftBar /> : <PublicLeftBar />}
             <div className="left-bar-flex">
-              <Route path="/main" exact>{isCreator ? <CreatorMain /> : <PublicMain />}</Route>
+              {/* <Route path="/main" exact>{isCreator ? <CreatorMain /> : <PublicMain />}</Route>
                 <Route path="/oninestore">{isCreator? <CreatorOnlineStore />:<PublicOnlineStore /> }</Route>
                 <Route path="/calendar">{isCreator? <CreatorCalendar />:<PublicCalendar />}</Route>
                 <Route path="/contact">{isCreator?<CreatorContact />:<PublicContact />}</Route>
-                <Route path="/inbox">{isCreator?<CreatorInbox />:<PublicInbox />}</Route>
-              {/* <Route path="/creator-onlinestore" exact><CreatorOnlineStore /></Route> */}
-              {/* <Route path="/creator-calendar" exact><CreatorCalendar /></Route> */}
+                <Route path="/inbox">{isCreator?<CreatorInbox />:<PublicInbox />}</Route> */}
+              <Route path="/creator-onlinestore" exact><CreatorOnlineStore /></Route>
+              <Route path="/creator-calendar" exact><CreatorCalendar /></Route>
               <Route path="/fanszone" exact><CreatorPublicFansZone /></Route>
               <Route path="/creator-fansmanagement" exact><CreatorFansManagement /></Route>
-              {/* <Route path="/creator-contact" exact><CreatorContact /></Route> */}
+              <Route path="/creator-contact" exact><CreatorContact /></Route>
               <Route path="/creatorAddEvent" exact><AddEvent /></Route>
-              {/* <Route path="/creator-inbox" exact><CreatorInbox /></Route> */}
-              {/* <Route path="/creator-main" exact><CreatorMain /></Route> */}
-              {/* <Route path="/main" exact><PublicMain /></Route> */}
-              {/* <Route path="/onlinestore" exact><PublicOnlineStore /></Route> */}
-              {/* <Route path="/calendar" exact><PublicCalendar /></Route> */}
-              {/* <Route path="/contact" exact><PublicContact /></Route> */}
-              {/* <Route path="/inbox" exact><PublicInbox /></Route> */}
+              <Route path="/creator-inbox" exact><CreatorInbox /></Route>
+              <Route path="/creator-main" exact><CreatorMain /></Route>
+              <Route path="/main" exact><PublicMain /></Route>
+              <Route path="/onlinestore" exact><PublicOnlineStore /></Route>
+              <Route path="/calendar" exact><PublicCalendar /></Route>
+              <Route path="/contact" exact><PublicContact /></Route>
+              <Route path="/inbox" exact><PublicInbox /></Route>
               <Route path="/edit" exact><EditPage /></Route>
             </div>
             <div className='circle1'

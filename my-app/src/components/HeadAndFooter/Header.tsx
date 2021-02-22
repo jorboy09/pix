@@ -27,7 +27,7 @@ export function Header() {
         if (isCreator !== false) {
             dispatch(fetchFan(localStorage.getItem('token')))
         }
-    }, [dispatch, isCreator, curUser])
+    }, [dispatch, isCreator])
 
     // import(`${process.env.REACT_APP_DO_SPACE_URL}/${curUser.profile_pic}`)
     //     .then(image => setBigHeadMak(image.default))
@@ -35,16 +35,17 @@ export function Header() {
     // import(`${process.env.REACT_APP_DO_SPACE_URL}/${curUser.cover_pic}`)
     //     .then(image => setBGImg(image.default))
     //     .catch(() => setBGImg(null))
-    // import(`../../../public/creator_img/${curUser.profile_pic}`)
-    //     .then(image => setBigHeadMak(image.default))
-    //     .catch(() => setBigHeadMak(null))
-    // import(`../../../public/creator_img/${curUser.cover_pic}`)
-    //     .then(image => setBGImg(image.default))
-    //     .catch(() => setBGImg(null))
+    import(`../../../public/creator_img/${curUser.profile_pic}`)
+        .then(image => setBigHeadMak(image.default))
+        .catch(() => setBigHeadMak(null))
+    import(`../../../public/creator_img/${curUser.cover_pic}`)
+        .then(image => setBGImg(image.default))
+        .catch(() => setBGImg(null))
 
     return (
         <div className={style.header} style={{
-            backgroundImage: `url(${process.env.REACT_APP_DO_SPACE_URL}/${curUser.cover_pic})`
+            // backgroundImage: `url(${process.env.REACT_APP_DO_SPACE_URL}/${curUser.cover_pic})`
+            backgroundImage: `url(${bgImg})`
         }}>
             <div className={style.channel_name} style={{
                 backgroundColor: themes[curUser.colour_theme][1].colour,
@@ -53,7 +54,8 @@ export function Header() {
                 {curUser.username}
             </div>
             <div className={style.channel_icon} style={{
-                backgroundImage: `url(${process.env.REACT_APP_DO_SPACE_URL}/${curUser.profile_pic})`
+                // backgroundImage: `url(${process.env.REACT_APP_DO_SPACE_URL}/${curUser.profile_pic})`
+                backgroundImage: `url(${bigHeadMak})`
             }}></div>
             <div className={style.channel_description} style={{
                 backgroundColor: themes[curUser.colour_theme][3].colour,
