@@ -1,0 +1,123 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    width: 65vw;
+    margin-top: 20px;
+}
+
+.left_board{
+    border-radius: 5px;
+    overflow: scroll;
+    width: 33vw;
+    height: calc(80vh * 0.9);
+    overflow: hidden;
+    min-height: 75vh;
+}
+
+.right_board {
+    position: relative;
+    width: 31vw;
+    height: 75vh;
+    /* min-height: 75vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding-bottom: 20px; */
+    overflow-y: scroll;
+}
+
+.board_row {
+    padding: 10px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.board_title {
+    font-size: 2.5vw;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bold;
+    letter-spacing: 6px;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    color: var(--ion-color-primary-contrast);
+    /* opacity: 70%; */
+    text-shadow: 2px 2px var(--ion-color-primary);
+    flex-wrap: nowrap;
+}
+
+.change_board_button{
+    cursor: pointer;
+    width: 2.5vw;
+}
+
+.change_board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #202020;
+    color: #FFFFFF;
+    top: 50px;
+    z-index: 9;
+    padding: 10px 20px;
+}
+
+.change_board>div {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.none{
+    width: 1.5vw;
+}
+
+.custom {
+    position: relative;
+}
+
+.edit {
+    position: absolute;
+    width: 1.5vw;
+    right: -2vw;
+    bottom: 0.3vw;
+    z-index: 9999;
+}
+
+@media screen and (max-width: 769px){
+    .main {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .left_board, .right_board {
+        width: 100%;
+    }
+
+    .right_board {
+        height: max-content;
+        max-height: 50vh;
+        min-height: 0;
+    }
+
+    .right_board>div:last-child {
+        overflow-y: scroll;
+    }
+
+    .board_title {
+        font-size: 3.5vw;
+    }
+
+    .change_board_button {
+        width: 5vw;
+    }
+
+    .edit {
+        width: 2.5vw;
+    }
+}

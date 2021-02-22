@@ -1,0 +1,57 @@
+.fan_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fan {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding-left: 30px;
+    border: solid 1px;
+    /* background-color: #c4c4c4; */
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.856), rgba(255, 255, 255, 0.082));
+    cursor: pointer;
+    border-radius: 13px;
+    height: 60px;
+    margin-bottom: 10px;
+    width: -webkit-fill-available;
+}
+
+.fan_name{
+    display: flex;
+    align-items: center;
+    padding-bottom: 4px;
+    font-size: 20px;
+}
+
+.fan_button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+}
+
+.superfan {
+    height: 40px;
+    width: 40px;
+}
+
+.cross {
+    height: 40px;
+    width: 40px;
+}
+
+.activity_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: solid 1px;
+    border-bottom: solid 1px;
+    border-right: solid 1px;
+    border-radius: 0 0 18px 18px;
+    margin-bottom: 10px;
+    width: 95%;
+}

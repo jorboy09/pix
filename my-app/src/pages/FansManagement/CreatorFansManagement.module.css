@@ -1,0 +1,105 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2vw;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vw;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bold;
+    letter-spacing: 6px;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 10px 50px;
+    color: var(--ion-color-primary-contrast);
+    /* opacity: 70%; */
+    text-shadow: 2px 2px var(--ion-color-primary);
+    flex-wrap: nowrap;
+    text-align: center;
+}
+
+.fans_list {
+    /* border: solid; */
+    height: max-content;
+    padding: 10px;
+    overflow-y: scroll;
+    max-height: 650px;
+    width: 100%;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9));
+    border-radius: 5px;
+    padding: 15px 10px;
+    border-radius: 10px;
+}
+
+.filter {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9));
+    padding: 15px 10px;
+    border-radius: 10px;
+}
+
+.name_search {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.name_search>input {
+    height: 30px;
+}
+
+.date_filter {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.date_filter>label {
+    display: flex;
+    align-items: center;
+}
+
+.date_filter>input {
+    width: 170px;
+}
+ 
+input:invalid + span::after {
+    content: '✖';
+}
+  
+input:valid+span::after {
+    content: '✓';
+}
+
+@media screen and (max-width: 842px){
+    .filter{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .date_filter{
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+
+@media screen and (max-width: 400px){
+    .main{
+        padding: 140px 0;
+    }
+}

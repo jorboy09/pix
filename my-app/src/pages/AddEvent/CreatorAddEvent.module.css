@@ -1,0 +1,136 @@
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vw;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bold;
+    letter-spacing: 6px;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 10px 50px;
+    color: var(--ion-color-primary-contrast);
+    /* opacity: 70%; */
+    text-shadow: 2px 2px var(--ion-color-primary);
+    flex-wrap: nowrap;
+    text-align: center;
+}
+
+.container {
+    width: 68vw;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 2vw;
+}
+
+.event_form {
+    display: flex;
+    font-size: 18px;
+    flex-direction: column;
+    width: 100vw;
+    margin-top: 40px;
+    margin-right: 1vw;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+}
+
+.event_form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.event_form div input{
+    display: flex;
+    font-size: 18px;
+    padding: 15px 3px;
+    width: 65%;
+    margin: 0;
+}
+
+.description {
+    display: inline!important;
+    margin-top: 10px;
+}
+
+.description textarea {
+    color: #000000;
+    font-size: 18px;
+    margin-top: 15px;
+    word-wrap: normal;
+    border: solid 1px #000000;
+    resize: none;
+    overflow-wrap: break-word;
+    width: 100%;
+    height: 200px;
+}
+
+.submit {
+    width: 100%;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+}
+
+.event_form button {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.event_form button:focus {
+    outline: none;
+}
+
+
+@media screen and (max-width: 1441px){
+    .event_form{
+        width: 100vw;
+    }
+    
+    .calendar_container{
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width: 1220px){
+    .container{
+        flex-direction: column-reverse;
+    }
+    .event_form{
+        width: 100%;
+    }
+    .calendar_container{
+        width: 100%;
+        height: 50vw;
+        overflow-y: scroll;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .container{
+        width: 78vw;
+    }
+}
+
+@media screen and (max-width: 410px){
+    .container{
+        width: 87vw;
+    }
+}
+
+@media screen and (max-width:375px){
+    .container{
+        width: 96vw;
+    }
+}

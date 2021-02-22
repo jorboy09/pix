@@ -1,0 +1,566 @@
+.header{
+    position: relative;
+    background-color: wheat;
+    width: 100%;
+    height: 266px;
+    /* background-image: url(../../../public/creator_img/background.jpg); */
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0px;
+}
+
+.channel_icon, .channel_name, .channel_description, .login{
+    position: absolute;
+}
+
+.channel_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 195px;
+    height: 195px;
+    left: 49px;
+    top: 147px;
+    border: solid;
+    border-radius: 999px;
+    z-index: 10;
+    /* background-image: url(../../../public/creator_img/icon.jpg); */
+    background-position: center;
+    background-size: cover;
+}
+
+.channel_name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.308);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.channel_description{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 104px;
+    top: 229px;
+    background-color: blanchedalmond;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.channel_description span {
+    padding-right: 2vw;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: floralwhite;
+    width: 123px;
+    height: 50px;
+    right: 10px;
+    top: 12px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+/* mobile responsive */
+    /* Laptop */
+@media screen and (max-width: 2561px) {
+    .header {
+        height: 20vw;
+        /* margin-bottom: 4vw; */
+    }
+
+    .channel_name {
+        width: fit-content;
+        height: 4vw;
+        left: 13vw;
+        top: 14vw;
+        font-size: 2vw;
+        padding-left: 4vw;
+        padding-right: 3vw;
+    }
+
+    .channel_icon {
+        width: 11vw;
+        height: 11vw;
+        top: 12.5vw;
+        left: 4vw;
+    }
+
+    .channel_description{
+        height: 5vw;
+        top: 18vw;
+        font-size: 30px;
+        line-height: 50px;
+    }
+
+    .channel_description span {
+        padding-left: 17vw;
+    }
+
+    .login{
+        width: 9vw;
+        height: 3vw;
+        font-size: 28px;
+        right: 1vw;
+        top: 1vw;
+    }
+}
+
+@media screen and (max-width: 2139px) {
+    .channel_description{
+        line-height: 47px;
+    }
+
+    .channel_description span {
+        padding-left: 16.5vw;
+    }
+
+    .login{
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 2031px) {
+    .login{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 1950px) {
+    .channel_description{
+        line-height: 42px;
+        font-size: 26px;
+    }
+
+    .channel_description span {
+        padding-left: 16.5vw;
+    }
+
+    .login{
+        font-size: 26px;
+        width: 10vw;
+    }
+}
+
+@media screen and (max-width: 1851px) {
+    .login{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    .channel_description{
+        font-size: 24px;
+        line-height: 40px;
+    }
+
+    .login{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 1711px) {
+    .channel_description{
+        font-size: 22px;
+        line-height: 37px;
+    }
+
+    .login{
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 1660px) {
+    .channel_description{
+        font-size: 22px;
+        line-height: 35px;
+    }
+
+    .login{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 1561px) {
+    .login{
+        font-size: 21px;
+    }
+}
+
+@media screen and (max-width: 1501px) {
+    .channel_description{
+        font-size: 21px;
+        line-height: 33px;
+    }
+}
+
+@media screen and (max-width: 1470px) {
+    .login{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1401px) {
+    .channel_description{
+        font-size: 20px;
+        line-height: 31px;
+    }
+
+    .login{
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 1341px) {
+    .channel_description{
+        font-size: 19px;
+        line-height: 30px;
+    }
+
+    .login{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1271px) {
+    .login{
+        width: 11vw;
+        height: 3.3vw;
+    }
+
+    .channel_description{
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width: 1201px) {
+    .login{
+        font-size: 17px;
+    }
+
+    .channel_description{
+        font-size: 17px;
+        line-height: 27px;
+    }
+}
+
+@media screen and (max-width: 1111px) {
+    .login{
+        font-size: 16px;
+    }
+
+    .channel_description{
+        font-size: 16px;
+        line-height: 25px;
+        height: 5.5vw;
+        top: 17.5vw;
+    }
+}
+
+@media screen and (max-width: 1051px) {
+    .login{
+        font-size: 15px;
+        height: 3.5vw;
+    }
+}
+
+@media screen and (max-width: 997px) {
+    .channel_description{
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .login{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 941px) {
+    .login{
+        width: 12vw;
+    }
+}
+
+@media screen and (max-width: 911px) {
+    .channel_description{
+        font-size: 14px;
+        line-height: 23px;
+    }
+}
+
+@media screen and (max-width: 866px) {
+    .login{
+        font-size: 13px;
+    }
+
+    .channel_description{
+        font-size: 12px;
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-width: 816px) {
+    .login{
+        width: 13vw;
+        height: 3.6vw;
+    }
+}
+
+    /* Tablet & Mobile Device */
+@media screen and (max-width: 769px) {
+    .header {
+        height: 30vw;
+        /* margin-bottom: 4vw; */
+    }
+
+    .channel_name {
+        width: fit-content;
+        height: 6vw;
+        top: 77%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3vw;
+        padding: 0 6vw;
+    }
+
+    .channel_icon {
+        width: 13vw;
+        height: 13vw;
+        top: 47%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .channel_description{
+        height: 7vw;
+        top: 26vw;
+        font-size: 13px;
+        line-height: 24px;
+    }
+
+    .channel_description span {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    .login{
+        width: 14vw;
+        height: 4vw;
+        font-size: 14px;
+        right: 2vw;
+        top: 2vw;
+    }
+}
+
+@media screen and (max-width: 731px) {
+    .login{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 715px) {
+    .channel_description{
+        font-size: 12px;
+        line-height: 23px;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .login{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 657px) {
+    .channel_description{
+        line-height: 21px;
+    }
+
+    .channel_description span {
+        padding-left: 9vw;
+        padding-right: 9vw;
+    }
+}
+
+@media screen and (max-width: 646px) {
+    .login{
+        width: 15vw;
+        height: 5vw;
+    }
+
+    .channel_description span {
+        padding-left: 8vw;
+        padding-right: 8vw;
+    }
+}
+
+@media screen and (max-width: 626px) {
+    .channel_description span {
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .channel_description span {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .login{
+        width: 17vw;
+        height: 5vw;
+    }
+}
+
+@media screen and (max-width: 582px) {
+    .channel_description span {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .channel_description{
+        font-size: 13px;
+        height: 12vw;
+        top: 26vw;
+    }
+
+    .header {
+        /* margin-bottom: 9vw; */
+    }
+}
+
+@media screen and (max-width: 532px) {
+    .login{
+        width: 18vw;
+        height: 5.5vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .login{
+        width: 19vw;
+        height: 5.8vw;
+    }
+    .channel_description {
+        line-height: 19px;
+    }
+}
+
+@media screen and (max-width: 473px) {
+    .login{
+        width: 20vw;
+        height: 6vw;
+    }
+
+    .channel_description {
+        line-height: 17px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 451px) {
+    .login{
+        width: 21vw;
+        height: 6.5vw;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .login{
+        width: 22vw;
+        height: 7vw;
+    }
+
+    .channel_description {
+        line-height: 15px;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .login{
+        width: 23vw;
+        height: 7.5vw;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .header {
+        /* margin-bottom: 11vw; */
+    }
+    .login{
+        width: 24vw;
+        height: 8vw;
+    }
+
+    .channel_description {
+        height: 14vw;
+        line-height: 17px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .login{
+        width: 25vw;
+        height: 8.5vw;
+    }
+}
+
+@media screen and (max-width: 359px) {
+    .login{
+        width: 26vw;
+        height: 9vw;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .header {
+        /* margin-bottom: 12vw; */
+    }
+    .login{
+        width: 27vw;
+        height: 8vw;
+    }
+
+    .channel_description {
+        height: 15vw;
+        line-height: 18px;
+    }
+}
+
+@media screen and (max-width: 332px) {
+    .login{
+        width: 28vw;
+    }
+
+    .channel_description {
+        height: 15vw;
+        line-height: 17px;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .login{
+        width: 29vw;
+    }
+
+    .channel_description {
+        height: 15vw;
+        line-height: 16px;
+    }
+}

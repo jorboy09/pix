@@ -1,0 +1,33 @@
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form>label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 1.2vw;
+}
+
+.form>label>input {
+    width: 70%;
+}
+
+.form>label>input[name='photo']{
+    font-size: 0.7vw;
+    align-self: center;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+}
+
+.description>textarea{
+    padding: 5px 5px 20px 5px;
+    min-height: 100px;
+    line-height: normal;
+    overflow: hidden;
+    resize: none;
+}

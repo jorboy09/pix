@@ -1,0 +1,459 @@
+*{
+    font-family: 'Noto Sans TC'
+}
+.footer{
+    background-color: var(--ion-color-primary-shade);
+    color: #5d4b09;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    left:0;
+    bottom:0;
+    right:0;
+    max-width: 100%;
+    z-index: 99;
+    font-size: 10px;
+}
+
+html, body{
+    height: 100vh;
+}
+
+/* Colorwheel */
+.main{
+    min-height: fit-content;
+    background: linear-gradient(to right top, var(--ion-color-primary), var(--ion-color-primary-contrast));
+    display: flex;
+    justify-content: center;
+    padding: 70px 0;
+
+}
+
+.middle-section{
+    background: white;
+    height: fit-content;
+    min-height: 80vh;
+    width: 90%;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9));
+    border-radius: 2rem;
+    display: flex;
+    z-index: 2;
+}
+
+.circle1, .circle2{
+    background: #ffffff;
+    background: linear-gradient(to right bottom, 
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.7)
+    );
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    
+}
+
+
+.circle1 {
+    top: 40vh;
+    right: 1%;
+
+}
+.circle2 {
+    bottom: 0;
+    left: 1%;
+}
+
+.left-bar-flex{
+    flex: 1;
+    margin: 0px 1vw 0px 1vw;
+    height: 80%;
+    width: 100%;
+}
+
+.right-bar-flex{
+    flex: 1;
+}
+
+
+@media screen and (min-width: 1024px){
+    .left-bar {
+        width: 20vw;
+        font-size: 25px;
+        padding: 60px;
+    }
+
+    .left-bar button p {
+        white-space: nowrap;
+    }
+
+    .left-bar button{
+        margin: 20px 0 20px 20px;
+    }
+}
+
+@media screen and (max-width: 817px){
+    .left-bar-flex{
+        margin: 0px 1vw 60px 1vw;
+        max-width: 70vw;
+    }
+}
+
+@media screen and (max-width: 769px){
+    .middle-section{
+        height: fit-content;
+    }
+    
+    .left-bar{
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 488px) {
+    html, body {
+        width: 101vw;
+    }
+    .left-bar button p {
+        margin: 0;
+    }
+    .left-bar-flex{
+        min-width: 70vw;
+        max-width: 0;
+    }
+}
+
+@media screen and (max-width: 481px) {
+    html, body {
+        width: 102vw;
+    }
+}
+
+@media screen and (max-width: 477px) {
+    html, body {
+        width: 103vw;
+    }
+}
+
+@media screen and (max-width: 473px) {
+    html, body {
+        width: 104vw;
+    }
+}
+
+@media screen and (max-width: 465px) {
+    html, body {
+        width: 105vw;
+    }
+}
+
+@media screen and (max-width: 465px) {
+    html, body {
+        width: 106vw;
+    }
+    .left-bar-flex{
+        min-width: 74vw;
+        max-width: 0;
+    }
+}
+
+@media screen and (max-width: 457px) {
+    html, body {
+        width: 107vw;
+    }
+}
+
+@media screen and (max-width: 452px) {
+    html, body {
+        width: 108vw;
+    }
+}
+
+@media screen and (max-width: 448px) {
+    html, body {
+        width: 109vw;
+    }
+}
+
+@media screen and (max-width: 444px) {
+    html, body {
+        width: 110vw;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    html, body {
+        width: 111vw;
+    }
+}
+
+@media screen and (max-width: 436px) {
+    html, body {
+        width: 112vw;
+    }
+}
+
+@media screen and (max-width: 432px) {
+    html, body {
+        width: 113vw;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    html, body {
+        width: 114vw;
+    }
+    .left-bar-flex{
+        min-width: 80vw;
+        max-width: 0;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    html, body {
+        width: 115vw;
+    }
+}
+
+@media screen and (max-width: 421px) {
+    html, body {
+        width: 116vw;
+    }
+}
+
+@media screen and (max-width: 417px) {
+    html, body {
+        width: 117vw;
+    }
+}
+
+@media screen and (max-width: 413px) {
+    html, body {
+        width: 118vw;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    html, body {
+        width: 119vw;
+    }
+}
+
+@media screen and (max-width: 406px) {
+    html, body {
+        width: 120vw;
+    }
+}
+
+@media screen and (max-width: 403px) {
+    html, body {
+        width: 121vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    html, body {
+        width: 122vw;
+    }
+    .left-bar-flex{
+        min-width: 87vw;
+        max-width: 0;
+    }   
+}
+
+@media screen and (max-width: 397px) {
+    html, body {
+        width: 123vw;
+    }
+}
+
+@media screen and (max-width: 393px) {
+    html, body {
+        width: 124vw;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    html, body {
+        width: 125vw;
+    }
+}
+
+@media screen and (max-width: 387px) {
+    html, body {
+        width: 126vw;
+    }
+}
+
+@media screen and (max-width: 384px) {
+    html, body {
+        width: 127vw;
+    }
+
+    .circle1{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 381px) {
+    html, body {
+        width: 128vw;
+    }
+}
+
+@media screen and (max-width: 378px) {
+    html, body {
+        width: 129vw;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    html, body {
+        width: 130vw;
+    }
+    .left-bar-flex{
+        min-width: 94vw;
+        max-width: 0;
+    }
+}
+
+@media screen and (max-width: 372px) {
+    html, body {
+        width: 131vw;
+    }
+}
+
+@media screen and (max-width: 369px) {
+    html, body {
+        width: 132vw;
+    }
+}
+
+@media screen and (max-width: 366px) {
+    html, body {
+        width: 133vw;
+    }
+}
+
+@media screen and (max-width: 364px) {
+    html, body {
+        width: 134vw;
+    }
+}
+
+@media screen and (max-width: 361px) {
+    html, body {
+        width: 135vw;
+    }
+}
+
+@media screen and (max-width: 358px) {
+    html, body {
+        width: 136vw;
+    }
+}
+
+@media screen and (max-width: 356px) {
+    html, body {
+        width: 137vw;
+    }
+}
+
+@media screen and (max-width: 353px) {
+    html, body {
+        width: 138vw;
+    }
+}
+
+@media screen and (max-width: 351px) {
+    html, body {
+        width: 139vw;
+    }
+    .left-bar-flex{
+        min-width: 103vw;
+        max-width: 0;
+    }
+}
+
+@media screen and (max-width: 348px) {
+    html, body {
+        width: 140vw;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    html, body {
+        width: 141vw;
+    }
+}
+
+@media screen and (max-width: 343px) {
+    html, body {
+        width: 142vw;
+    }
+}
+
+@media screen and (max-width: 341px) {
+    html, body {
+        width: 143vw;
+    }
+}
+
+@media screen and (max-width: 338px) {
+    html, body {
+        width: 144vw;
+    }
+}
+
+@media screen and (max-width: 336px) {
+    html, body {
+        width: 145vw;
+    }
+}
+
+@media screen and (max-width: 333px) {
+    html, body {
+        width: 146vw;
+    }
+}
+
+@media screen and (max-width: 332px) {
+    html, body {
+        width: 147vw;
+    }
+}
+
+@media screen and (max-width: 329px) {
+    html, body {
+        width: 148vw;
+    }
+}
+
+@media screen and (max-width: 327px) {
+    html, body {
+        width: 149vw;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    html, body {
+        width: 150vw;
+    }
+}
+
+@media screen and (max-width: 322px) {
+    html, body {
+        width: 151vw;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    html, body {
+        width: 152vw;
+    }
+    .left-bar-flex{
+        min-width: 112vw;
+        max-width: 0;
+    }
+}

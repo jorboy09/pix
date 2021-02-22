@@ -1,0 +1,280 @@
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../../bg_img/william-daigneault-Cd84YdL9px8-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.Login-bg {
+    // background-image: linear-gradient(to bottom left, red, rgb(0, 102, 255));
+    // background: linear-gradient(to right bottom, #BFBFC1, #F8ED95);
+    background: linear-gradient(to right bottom, #BFBFC190, #BFBFC1);
+    opacity: 0.87;
+    width: 40vw;
+    border-color: transparent;
+    border-radius: 1vw;
+    padding: 1vw;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Reg-bg {
+    // background-image: linear-gradient(to bottom left, rgb(81, 0, 128), rgb(0, 145, 145));
+    background: linear-gradient(to right bottom, #BFBFC190, #BFBFC1);
+
+    opacity: 0.87;
+    width: 40vw;
+    border-color: transparent;
+    border-radius: 1vw;
+    padding: 1vw;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.Login-Form-Container {
+    display: flex;
+    justify-content: space-around;
+    width: 37vw;
+}
+
+.Login-buttons {
+    display: flex;
+    justify-content: center;
+    height: 6.5vh;
+    width: 37vw;
+}
+
+.Login-buttons button{
+    border-radius: 10px;
+
+}
+
+.Login {
+    // background-color: rgb(0, 102, 255);
+    background-color: #DAC78490;
+
+    border-radius: 0vw 0vw 0vw 1vw;
+}
+
+.Register {
+    background-color: #BFBFC190;
+    border-radius: 0vw 0vw 1vw 0vw;
+}
+
+.invis {
+    background: #DAC784;
+}
+
+.hidden {
+    display: none;
+}
+
+.button {
+    width: 50%;
+    text-align: center;
+    padding: 5px;
+    padding-right: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.Login:hover, .Login:focus  {
+    background-color:  rgb(0, 81, 255);
+    border: 0
+}
+
+.Register:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.button:focus {
+    border: 2px solid black;
+}
+
+.form > input {
+    border-radius: 0%;
+    padding: 5%;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 8vh;
+    border: 1px grey solid;
+}
+
+.pw-container > input {
+    border-radius: 0%;
+    padding: 5%;
+    width: 80%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-right: 0;
+    height: 8vh;
+    border: 1px grey solid;
+}
+
+.pw-container > button {
+    // width: 20%;
+    height: 100%;
+    height: 8vh;
+    border: 1px grey solid;
+}
+
+.pw-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.form-container {
+    display: flex;
+    width: 37vw;
+}
+
+.Login-Form, .Login-Form-Fan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% * 165/370);
+    // width: 16.5vw;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9));
+    margin: 3px;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.Login-Form > h3, .Login-Form-Fan > h3 {
+    font-size: 20px;
+    margin-top: 2vh;
+}
+
+.Login-Form-Heading {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-login-button {
+    border: 1px solid grey;
+    height: 6vh;
+}
+
+.submit-login-button-container {
+    width: 100%;
+}
+
+@media screen and (max-width: 1076px) {
+
+    .Login-Form-Heading {
+        justify-content: flex-start;
+        width: 80%;
+    }
+
+    .Login-Form-Container {
+        flex-direction: column;
+    }
+
+    .Login-Form, .Login-Form-Fan {
+        width: calc(100% * 33/37);
+    }
+
+}
+
+@media screen and (max-width: 924px) {
+
+    .form > input {
+        width: 95%;
+    }
+
+    .pw-container {
+        width: 95%;
+    }
+
+    .pw-container > input {
+        width: 75%;
+    }
+
+    .pw-container > button {
+        width: 25%;
+    }
+
+    // .Login-bg, .Reg-bg {
+    //     width: 45vw;
+    // }
+
+
+}
+
+@media screen and (max-width: 672px) {
+
+    .Login-Form-Heading {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 596px) {
+
+    .Login-Form-Heading {
+        width: 95%;
+    }
+
+}
+
+@media screen and (max-width: 566px) {
+
+    .Login-Form-Heading {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+}
+
+//     font-weight: bold;
+// }
+
+.Login-Form-Fan .form input[type="submit"],
+.Login-Form .form input[type="submit"]{
+    background: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: var(--ion-color-primary);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), var(--ion-color-primary-shade, 0.2));
+    // border: 2px solid #00000090;
+    color: #00000090;
+}
+
+
+.Login-Form-Fan .form input,
+.Login-Form .form input{
+   
+    border: none;
+    color: #00000090;
+}
+
+.Login-Form-Fan .form input:focus,
+.Login-Form .form input:focus{
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.753);
+    border: none;
+}
+   

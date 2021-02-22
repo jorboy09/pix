@@ -1,0 +1,158 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,238,176,1) 32%, rgba(255,223,108,1) 100%);
+}
+
+.deployment{
+    position: relative;
+    width: 90vw;
+    height: 90vh;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.back{
+    position: absolute;
+    width: fit-content;
+    padding: 1px 10px;
+    left: 0;
+    top: 5px;
+    font-size: 15px;
+    color: black;
+}
+
+.back:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.header {
+    user-select: none;
+    position: absolute;
+    top: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    font-size: 25px;
+}
+
+.header>img{
+    cursor: pointer;
+    width: 5vh;
+}
+
+.instruction{
+    color:black;
+    margin-top: 14vh;
+    margin-bottom: 8vh;
+    overflow-y: scroll;
+    padding: 5vh;
+    border-radius: 30px;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9));
+}
+
+.instruction>p{
+    margin-bottom: 4vh;
+}
+
+.instruction::-webkit-scrollbar{
+    width: 7px;
+}
+
+.instruction::-webkit-scrollbar-thumb{
+    box-shadow: 0 0 20px #ffffff;
+    background-color: #ffd332;
+    border-radius: 20px;
+}
+
+.code{
+    background-color: #202020;
+    color: white;
+    padding: 1vw 2vw;
+}
+
+.code>div{
+    margin-bottom: 1vw;
+    user-select: all;
+}
+
+.code>div:last-child{
+    margin-bottom: 0;
+}
+
+.reference{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+}
+
+.reference_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-right: 10px;
+}
+
+.label>div:first-child {
+    margin-bottom: 10px;
+}
+
+.reference_form>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    text-align: start;
+    width: 100%;
+}
+
+.reference_form>div:first-child{
+    margin-top: 30px;
+}
+
+.reference_form div input{
+    display: flex;
+    font-size: 18px;
+    padding: 10px 3px;
+    width: 80%;
+    margin: 0;
+}
+
+.submit {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border: solid 1px;
+    background-color: transparent;
+    padding: 3px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #707070;
+}
+
+.page_no{
+    margin: 5px 0;
+    position: absolute;
+    bottom: 1vh;
+}

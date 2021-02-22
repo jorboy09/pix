@@ -1,0 +1,121 @@
+.left-bar{
+    padding: 10px;
+    padding-top: 5vh;
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.1)
+      );
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+
+}
+
+.creator-left-bar{
+    height: 100%;
+
+}
+
+.left-bar > button{
+    background-color: none;
+    background: none;
+    border: none;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+    /* color: var(--ion-color-primary-contrast); */
+    font-family: 'Fira Sans', sans-serif;
+    margin: 10px 0;
+}
+
+.left-bar > button > i{
+    margin-right: 20px;
+}
+
+
+.left-bar button p{
+    margin: 0;
+}
+
+.left-bar button{
+    margin: 20px 0 20px 20px;
+}
+
+
+
+@media screen and (max-width: 2561px){
+    /* .left-bar > button {
+        font-size: 1.3vw;
+        margin: 1.2vw 0.5vw;
+    } */
+}
+
+@media screen and (max-width: 817px){
+    .left-bar button p{
+        /* width: 11vw; */
+        /* visibility: hidden; */
+        position: absolute;
+        left: -1000px;
+    }
+
+    .middle-section .left-bar {
+        width: 18vw;
+        padding: 30px 1px 0 13px;
+        display: flex;
+        flex-flow: wrap column;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+    }
+
+    .middle-section .left-bar > *{
+        margin: 10px 0;
+    }
+
+    .contact_main{
+        margin: 5px 0;
+    }
+
+    .title_bar form{
+        padding: 10px;
+    }
+
+    .middle-section .left-bar > *{
+        margin: 10px 0;
+        font-size: 30px;
+    }
+
+}
+
+/* @media screen and (max-width: 817px){
+    .left-bar {
+        width: 12vw;
+    }
+} */
+
+@media screen and (max-width: 320px){
+    .left-bar button p{
+        position: absolute;
+        left: -1000px;
+    }
+
+    .middle-section .left-bar {
+        width: 18vw;
+        padding: 30px 1px 0 5px;
+        display: flex;
+        flex-flow: wrap column;
+        align-items: center;
+        text-align: center;
+        /* justify-content: center; */
+    }
+
+    .middle-section .left-bar > *{
+        margin: 10px 0;
+        font-size: 20px;
+    }
+
+}

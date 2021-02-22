@@ -1,0 +1,198 @@
+.creator-message{
+    display: flex;
+    margin: 10px 10px 50px 10px;
+}
+
+.chatroomtitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.messageArea{
+    /* height: 55vh; */
+    overflow-y: scroll;
+    margin: 10px 5px;
+}
+
+
+
+.message-bar{
+    flex: 1;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9));
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 30px 10px 0px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.message-bar button{
+    border: none;
+    /* border-bottom: 1px solid var(--ion-color-primary-shade); */
+    background: none;
+    font-size: larger;
+    cursor: pointer;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9));
+    display: flex;
+    margin: 10px;
+    padding: 30px 0; 
+    justify-content: center;
+    color: var(--ion-color-primary-shade);
+
+}
+
+.message-contact{
+    font-size: 25px;
+}
+
+.messagebox{
+    margin: 30px 0;
+}
+
+.creatorMessage, .typingBox {
+    /* margin: 0 10vh; */
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9));
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.creatorMessage{
+    flex: 2;
+}
+
+.fansMessage{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+.creatorView, .fansView{
+    border-radius: 8px;
+    margin: 3px 10px; 
+    width: fit-content;
+    position: relative;
+    
+}
+
+.creatorView{
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9));
+    color: var(--ion-color-primary-shade);
+    display: flex;
+    margin-left: auto;
+    margin-bottom: 0;
+
+}
+
+.fansView{
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9));
+    color:  var(--ion-color-primary-shade);
+
+}
+
+.creatorView .time{
+    position: absolute;
+    top: 45px;
+    /* left: 80px; */
+    white-space: nowrap;
+    font-size: 10px;
+    justify-content: flex-end;
+}
+
+.fansView .time{
+    position: absolute;
+    white-space: nowrap;
+    font-size: 10px;
+}
+
+.fansView p{
+    margin-bottom: 0;
+
+}
+
+
+.time{
+    /* position: absolute;
+    top: 30px;
+    right: 10px; */
+    white-space: nowrap;
+    font-size: 10px;
+    color: var(--ion-color-primary-shade);
+    display: flex;
+    margin-left: auto;
+    margin-bottom: 0;
+    justify-content: flex-end;
+    margin-right: 10px;
+
+}
+
+.username {
+    /* position: absolute;
+    top: -20px;
+    left: -40px; */
+    font-size: 10px;
+
+}
+
+
+
+
+.fansView p, .creatorView p {
+    background: none repeat scroll 0 0;
+    /* color:#fff; */
+    padding: 5px 10px 5px 12px;
+    width:100%;
+  }
+
+  .typingBox input{
+        border: none;
+  }
+
+.typingBox form{
+    display: flex;
+    justify-content: space-between;
+}
+
+.typingBox button{
+    border: none;
+    padding: 5px 10px;
+    
+}
+
+
+
+@media screen and (max-width: 2561px){
+
+}
+
+@media screen and (max-width: 954px){
+    .message-contact {
+        font-size: 20px;
+    }}
+
+@media screen and (max-width: 768px){
+    .creator-message {
+        display: flex;
+        flex-flow: wrap column;
+        margin: 10px 10px 50px 10px;
+    }
+
+    .message-bar, .creatorMessage{
+        margin: 10px;
+        border-radius: 20px;
+    }
+    .message-bar button{
+        background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9));
+        border: none;
+    }
+
+}
+
+
+@media screen and (max-width: 320px){
+    
+
+}

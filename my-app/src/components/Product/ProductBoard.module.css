@@ -1,0 +1,59 @@
+.box {
+    width: 80%;
+}
+
+.container{
+    position: relative;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9));
+    border: solid 3px #ffffff;
+    border-radius: 20px;
+    margin: 15px 0;
+}
+
+.containerInnerText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: 'Fira Sans', sans-serif;
+    margin: 10px;
+}
+
+.containerInnerText .shoppingPrice{
+    color: var(--ion-color-primary-shade);
+    font-weight: bold;
+}
+
+.containerInnerText .shoppingDescription{
+    color: var(--ion-color-primary-shade);
+    font-weight:500;
+}
+
+.containerInnerText .shoppingName{
+    color: var(--ion-color-primary);
+    font-weight:bold;
+}
+
+.containerImg{
+    border-radius: 5px;
+}
+
+.containerImg img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 700px){
+    .containerInner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: wrap column;
+
+    }
+}
+
+
+

@@ -1,0 +1,15 @@
+.fan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 15px;
+    border: solid 2px #202020;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    height: 39px;
+}
+
+.fan>img {
+    width: 35px;
+    height: 35px;
+}

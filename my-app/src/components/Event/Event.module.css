@@ -1,0 +1,59 @@
+.box {
+    width: 100%;
+}
+
+.event {
+    line-height: 30px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.names {
+    display: flex;
+    justify-content: space-between;
+}
+
+.event_title{
+    width: 300px;
+}
+
+.holder{
+    width: fit-content;
+    margin-left: 10px;
+}
+
+.line1 {
+    height: 0;
+    width: 100px;
+    border-bottom: solid 2px #000000;
+    margin: 10px 20px;
+}
+
+.line2 {
+    height: 0;
+    width: 200px;
+    border-bottom: solid 2px #000000;
+    margin-bottom: 12px;
+}
+
+@media screen and (max-width: 450px){
+    .names {
+        flex-direction: column;
+    }
+
+    .event_title{
+        width: 100%;
+    }
+
+    .holder{
+        margin: 0;
+    }
+
+    .line1{
+        width: 14vw;
+    }
+
+    .line2{
+        width: 55vw;
+    }
+}

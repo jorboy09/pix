@@ -1,0 +1,70 @@
+.event_calendar_board {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    position: relative;
+}
+
+.event_calendar {
+    width: 100%;
+    height: 550px;
+    background-color: #ffffff;
+}
+
+.calendar_event_title {
+    height: fit-content;
+    padding-left: 10px;
+    padding-top: 0;
+    font-size: 10px;
+}
+
+.event_board {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid 1px #000000;
+    padding: 10px;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.event_list {
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 769px){
+    .event_calendar {
+        height: 74vw;
+    }
+}
+
+@media screen and (max-width: 554px){
+    .event_calendar {
+        height: 100vw;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .event_calendar {
+        height: 110vw;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .event_calendar {
+        height: 120vw;
+    }
+}
+
+@media screen and (max-width: 345px){
+    .event_calendar {
+        height: 135vw;
+    }
+}

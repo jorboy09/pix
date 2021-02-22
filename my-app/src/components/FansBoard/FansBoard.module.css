@@ -1,0 +1,11 @@
+.fans_board {
+    width: 95%;
+    height: 100%;
+}
+
+.fans_list {
+    width: 100%;
+    height: 45%;
+    padding: 10px;
+    margin-bottom: 30px;
+}

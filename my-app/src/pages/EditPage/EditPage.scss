@@ -1,0 +1,209 @@
+.edit-input {
+    display: flex;
+    margin: 7px;
+}
+
+.none {
+    display: none;
+}
+
+.colour-form > .all-colours {
+    display: flex;
+}
+
+.colours:hover {
+    opacity: 0.8
+}
+
+.edit-form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 50px;
+}
+
+#description {
+    width: 38vw;
+    height: 17vh;
+}
+
+.password-edit {
+    width: 22vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+}
+
+.password-edit > input {
+    width: 83%;
+    height: 100%;
+}
+
+.password-edit > button {
+    width: 17%;
+    justify-content: center;
+    align-items: center;
+    border: 1px black solid;
+    height: 100%;
+}
+
+.all-colours {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.edit-profile-pic {
+    width: 8vw;
+    height: 8vw;
+    border: #000000 2px solid;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../temp_img/no image.jpg');
+    background-position: center;
+    background-size: cover;
+    padding-right: 0.5vw;
+    padding-bottom: 0;
+    font-weight: 700;
+    // content: '';
+}
+
+.edit-profile-pic:hover, .edit-cover-pic:hover {
+    opacity: 0.65;
+    // content: "Edit profile";
+}
+
+.edit-profile-dialog {
+    width: 2.5vw;
+    height: 2.5vw;
+    border: #000000 2px solid;
+    background-color: #00878b;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 4px;
+    bottom: 9px;
+}
+
+.edit-cover-dialog {
+    width: 2.5vw;
+    height: 2.5vw;
+    border: #000000 2px solid;
+    background-color: #00878b;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 12px;
+    bottom: 18px;
+}
+
+.absolute {
+    position: relative;
+}
+
+.edit-cover-pic {
+    width: 20vw;
+    height: 15vh;
+    border: #000000 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    padding-right: 0.5vw;
+    padding-bottom: 0.10vh;
+    background-image: url('../../temp_img/noCover.jpg');
+    font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+
+    .edit-form {
+        flex-direction: column;
+    }
+
+    .password-edit {
+        width: 45vw;
+    }
+
+    #description {
+        width: 50vw;
+    }
+
+    .colours {
+        width: 8vw;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .edit-form {
+        flex-direction: column;
+    }
+
+    .password-edit {
+        width: 27vw;
+    }
+
+    #description {
+        width: 40vw;
+    }
+
+    .colours {
+        width: 5.25vw;
+    }
+}
+
+@media screen and (max-width: 424px) {
+
+    #description {
+        width: 70vw;
+    }
+
+    .colours {
+        width: 13vw;
+    }
+
+    .password-edit {
+        width: 47vw;
+    }
+
+}
+
+@media screen and (max-width: 655px) {
+
+    .colours {
+        width: 8vw;
+    }
+
+    .password-edit {
+        width: 34vw;
+    }
+
+}
+
+@media screen and (max-width: 562px) {
+
+    .colours {
+        width: 8vw;
+    }
+
+}
+@media screen and (max-width: 1048px) {
+
+    .colours {
+        width: 6vw;
+    }
+
+}
+
+.edit-container {
+    margin: 1vw;
+}
