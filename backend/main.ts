@@ -35,10 +35,8 @@ import { InboxController } from './controllers/inboxController'
 import { InboxService } from './services/inboxService'
 import { ConnectionService } from './services/connection.service'
 import { ConnectionController } from './controllers/connection.Controller'
-
-// S3 bucket packages
-// import aws from 'aws-sdk'
-// import multerS3 from 'multer-s3'
+import aws from 'aws-sdk'
+import multerS3 from 'multer-s3'
 
 //#endregion import above
 
@@ -52,141 +50,139 @@ const knex = Knex(knexConfig[process.env.NODE_ENV || 'development'])
 
 //#region multer storage below 
 
-//S3 Config
-// const spacesEndpoint = new aws.Endpoint(process.env.S3_ENDPOINT!);
+const spacesEndpoint = new aws.Endpoint(process.env.S3_ENDPOINT!);
 
-// const s3 = new aws.S3({
-//   accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-//   secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-//   endpoint: spacesEndpoint,
-// });
+const s3 = new aws.S3({
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  endpoint: spacesEndpoint,
+});
 
-// const customBoard = multerS3({
-//       s3: s3,
-//       bucket: process.env.BUCKET_NAME!,
-//       acl: 'public-read',
-//       metadata: (req,file,cb)=>{
-//           cb(null,{fieldName: file.fieldname});
-//       },
-//       key: (req,file,cb)=>{
-//           cb(null,`creator_img/${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
-//       }
-//   })
+const customBoard = multerS3({
+      s3: s3,
+      bucket: process.env.BUCKET_NAME!,
+      acl: 'public-read',
+      metadata: (req,file,cb)=>{
+          cb(null,{fieldName: file.fieldname});
+      },
+      key: (req,file,cb)=>{
+          cb(null,`creator_img/${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
+      }
+  })
 
-
-// const product = multerS3({
-//       s3: s3,
-//       bucket: process.env.BUCKET_NAME!,
-//       acl: 'public-read',
-//       metadata: (req,file,cb)=>{
-//           cb(null,{fieldName: file.fieldname});
-//       },
-//       key: (req,file,cb)=>{
-//           cb(null,`product_img/${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
-//       }
+// const customBoard = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, `${__dirname}/../my-app/public/creator_img`);
+//   },
+//   filename: function (req, file, cb) {
+//     cb(null, `${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
+//   }
 // })
 
-// const creatorImgProf = multerS3({
-//       s3: s3,
-//       bucket: process.env.BUCKET_NAME!,
-//       acl: 'public-read',
-//       metadata: (req,file,cb)=>{
-//           cb(null,{fieldName: file.fieldname});
-//       },
-//       key: (req,file,cb)=>{
-//           cb(null,`creator_img/${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
-//       }
-//   })
-// const creatorImg = multerS3({
-//       s3: s3,
-//       bucket: process.env.BUCKET_NAME!,
-//       acl: 'public-read',
-//       metadata: (req,file,cb)=>{
-//           cb(null,{fieldName: file.fieldname});
-//       },
-//       key: (req,file,cb)=>{
-//           cb(null,`creator_img/${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
-//       }
-//   })
-// const creatorVid = multerS3({
-//       s3: s3,
-//       bucket: process.env.BUCKET_NAME!,
-//       acl: 'public-read',
-//       metadata: (req,file,cb)=>{
-//           cb(null,{fieldName: file.fieldname});
-//       },
-//       key: (req,file,cb)=>{
-//           cb(null,`creator_video/${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
-//       }
-//   })
-// const creatorAud = multerS3({
-//       s3: s3,
-//       bucket: process.env.BUCKET_NAME!,
-//       acl: 'public-read',
-//       metadata: (req,file,cb)=>{
-//           cb(null,{fieldName: file.fieldname});
-//       },
-//       key: (req,file,cb)=>{
-//           cb(null,`creator_audio/${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
-//       }
-//   })
-const customBoard = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, `${__dirname}/../my-app/public/creator_img`);
-  },
-  filename: function (req, file, cb) {
-    cb(null, `${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
-  }
-})
+const product = multerS3({
+      s3: s3,
+      bucket: process.env.BUCKET_NAME!,
+      acl: 'public-read',
+      metadata: (req,file,cb)=>{
+          cb(null,{fieldName: file.fieldname});
+      },
+      key: (req,file,cb)=>{
+          cb(null,`product_img/${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
+      }
+  })
 
-const product = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, `${__dirname}/../my-app/public/product_img/`);
-  },
-  filename: function (req, file, cb) {
-    cb(null, `${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
-  }
-})
+// const product = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, `${__dirname}/../my-app/public/product_img/`);
+//   },
+//   filename: function (req, file, cb) {
+//     cb(null, `${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
+//   }
+// })
 
+const creatorImgProf = multerS3({
+      s3: s3,
+      bucket: process.env.BUCKET_NAME!,
+      acl: 'public-read',
+      metadata: (req,file,cb)=>{
+          cb(null,{fieldName: file.fieldname});
+      },
+      key: (req,file,cb)=>{
+          cb(null,`creator_img/${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
+      }
+  })
 
-const creatorImgProf = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, `${__dirname}/../my-app/public/creator_img`);
-  },
-  filename: function (req, file, cb) {
-    cb(null, `${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
-  }
-})
+// const creatorImgProf = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, `${__dirname}/../my-app/public/creator_img`);
+//   },
+//   filename: function (req, file, cb) {
+//     cb(null, `${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
+//   }
+// })
 
+const creatorImg = multerS3({
+      s3: s3,
+      bucket: process.env.BUCKET_NAME!,
+      acl: 'public-read',
+      metadata: (req,file,cb)=>{
+          cb(null,{fieldName: file.fieldname});
+      },
+      key: (req,file,cb)=>{
+          cb(null,`creator_img/${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
+      }
+  })
 
-const creatorImg = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, `${__dirname}/../my-app/public/creator_img`);
-  },
-  filename: function (req, file, cb) {
-    cb(null, `${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
-  }
-})
+// const creatorImg = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, `${__dirname}/../my-app/public/creator_img`);
+//   },
+//   filename: function (req, file, cb) {
+//     cb(null, `${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
+//   }
+// })
 
+const creatorVid = multerS3({
+      s3: s3,
+      bucket: process.env.BUCKET_NAME!,
+      acl: 'public-read',
+      metadata: (req,file,cb)=>{
+          cb(null,{fieldName: file.fieldname});
+      },
+      key: (req,file,cb)=>{
+          cb(null,`creator_video/${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
+      }
+  })
 
-const creatorVid = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, `${__dirname}/../my-app/public/creator_video`);
-  },
-  filename: function (req, file, cb) {
-    cb(null, `${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
-  }
-})
+// const creatorVid = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, `${__dirname}/../my-app/public/creator_video`);
+//   },
+//   filename: function (req, file, cb) {
+//     cb(null, `${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
+//   }
+// })
 
+const creatorAud = multerS3({
+      s3: s3,
+      bucket: process.env.BUCKET_NAME!,
+      acl: 'public-read',
+      metadata: (req,file,cb)=>{
+          cb(null,{fieldName: file.fieldname});
+      },
+      key: (req,file,cb)=>{
+          cb(null,`creator_audio/${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
+      }
+  })
 
-const creatorAud = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, `${__dirname}/../my-app/public/creator_audio`);
-  },
-  filename: function (req, file, cb) {
-    cb(null, `${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
-  }
-})
+// const creatorAud = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, `${__dirname}/../my-app/public/creator_audio`);
+//   },
+//   filename: function (req, file, cb) {
+//     cb(null, `${file.fieldname}-${Date.now()}.${file.mimetype.split('/')[1]}`);
+//   }
+// })
 
 export const customBoardUpload = multer({ storage: customBoard })
 export const productUpload = multer({ storage: product })

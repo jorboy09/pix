@@ -22,6 +22,7 @@ export class BoardController {
                 res.json({ result: false })
             }
         } catch (e) {
+            console.error(e)
             res.json({ result: false })
         }
     }

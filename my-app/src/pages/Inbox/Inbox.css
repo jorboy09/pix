@@ -149,6 +149,7 @@
 
   .typingBox input{
         border: none;
+        width: 100%;
   }
 
 .typingBox form{

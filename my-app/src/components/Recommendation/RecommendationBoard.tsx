@@ -12,8 +12,8 @@ export function RecommendationBoard() {
     }, [dispatch])
     return (
         <div className={style.box}>
-            {/* {boardinfo.media ? <img src={`${process.env.REACT_APP_DO_SPACE_URL}/${boardinfo.media}`} className={style.img} alt=''></img> : null} */}
-            {boardinfo.media ? <img src={`/creator_img/${boardinfo.media}`} className={style.img} alt=''></img> : null}
+            {boardinfo.media ? <img src={`${process.env.REACT_APP_DO_SPACE_URL}/${boardinfo.media}`} className={style.img} alt=''></img> : null}
+            {/* {boardinfo.media ? <img src={`/creator_img/${boardinfo.media}`} className={style.img} alt=''></img> : null} */}
             <div >{boardinfo.description}</div>
         </div>
     )

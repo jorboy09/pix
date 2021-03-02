@@ -23,6 +23,12 @@ export function MessageBar() {
             dispatch(loadMessagesThunk(name.id))
         }
     }
+
+    useEffect(() => {
+        fansid &&
+        dispatch(loadMessagesThunk(fansid))
+    }, [fansid])
+
     return (
         <div className='message-bar'>
             {isCreator && <div className="messageNameList">
@@ -32,13 +38,6 @@ export function MessageBar() {
                     <button key={nameList.id} type="button" onClick={() => handleLoad(nameList.id as number)}>
                         {nameList.username} </button>)
             }
-
-            {
-                fansid &&
-                dispatch(loadMessagesThunk(fansid))
-
-            }
-
         </div>
 
     )

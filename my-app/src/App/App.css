@@ -1,5 +1,6 @@
 *{
-    font-family: 'Noto Sans TC'
+    font-family: 'Noto Sans TC';
+    color: #202020;
 }
 .footer{
     background-color: var(--ion-color-primary-shade);
@@ -106,9 +107,9 @@ html, body{
         height: fit-content;
     }
     
-    .left-bar{
+    /* .left-bar{
         height: 100%;
-    }
+    } */
 }
 
 @media screen and (max-width: 488px) {

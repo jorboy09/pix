@@ -13,6 +13,7 @@ import { MessageBar } from '../../components/inbox/messageBar';
 
 export function CreatorInbox() {
     let inboxAll = useSelector((state: RootState) => state.inbox.inboxAll)
+    let nameLists = useSelector((state: RootState) => state.inboxNameList.inboxNameList)
     const [formState, { text }] = useFormState(null, {
         onChange(e, stateValues, nextStateValues) {
             const { name, value } = e.target;
@@ -61,8 +62,8 @@ export function CreatorInbox() {
                 <div className="fansMessage creatorMessage">
 
                     <div className="messageArea">
-                        {inboxAll.map((inbox, i) =>
-                            <div className='messagebox'>
+                        {nameLists.length!==0 &&  inboxAll.map((inbox, i) =>
+                            <div className='messagebox' key={i}>
                                 <div className={inbox.creator ? "creatorView" : "fansView"} >
                                     <p> {inbox.message} </p>
                                     <p className='time'> {timeFunction(inbox.created_at)} </p>

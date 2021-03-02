@@ -6,7 +6,7 @@ export interface ContactObject {
 }
 
 export interface social {
-    id: number | null, media: string, name: string
+    id?: number, media?: string,  custom_name?: string, name: string
 }
 
 export interface SocialObject {

@@ -33,7 +33,7 @@ export function ShowContact() {
                 <div className={style.public_social_media}>
                     {
                         <div className={style.each_social_media}>
-                            {social_media.instagram?.name !== undefined && <SocialIcon url={`http://instagram.com/${social_media.instagram?.name}`} bgColor="#747474" />}
+                            {social_media.instagram?.name && <SocialIcon url={`http://instagram.com/${social_media.instagram?.name}`} bgColor="#747474" />}
                             {social_media.facebook?.name && <SocialIcon url={`http://facebook.com/${social_media.facebook.name}`} bgColor="#747474" />}
                             {social_media.youtube?.name && <SocialIcon url={`http://youtube.com/${social_media.youtube.name}`} bgColor="#747474" />}
                             {social_media.twitter?.name && <SocialIcon url={`http://twitter.com/${social_media.twitter.name}`} bgColor="#747474" />}

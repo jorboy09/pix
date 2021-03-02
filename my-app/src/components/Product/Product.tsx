@@ -44,8 +44,9 @@ export function Product(props: IProductProps) {
                 <div className="container">
                     <div className="containerInner" key={shopping.id}>
                         <div className="containerImg">
-                            <img src={`${'/product_img/' + shopping.image_name}`} width='200' height='200' alt=''/>
-                            {/* <img src={`${process.env.REACT_APP_DO_SPACE_URL}/ ${shopping.image_name}`} width='200' height='200' alt=''/> */}
+                            {/* <img src={`${'/product_img/' + shopping.image_name}`} width='200' height='200' alt=''/> */}
+                            <img src={`${process.env.REACT_APP_DO_SPACE_URL}/${shopping.image_name}`} width='150' height='150' alt=''/>
+                            {/* <p>{shopping.image_name}</p> */}
                         </div>
 
                         <div className="containerInnerText">

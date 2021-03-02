@@ -21,9 +21,6 @@ export interface SocialObject {
     spotify: social | undefined,
     soundcloud: social | undefined,
     snapchat: social | undefined,
-    // other1media?: social | undefined,
-    // other2media?: social | undefined,
-    // other3media?: social | undefined,
     other1: social | undefined,
     other2: social | undefined,
     other3: social | undefined
@@ -47,25 +44,13 @@ export class ContactController {
             let contact = contactAndSocial.contact[0]
             let soc = contactAndSocial.social_media
 
-            const convertArrayToObject = (array, key) => {
+            const convertArrayToObject = (array: any[], key) => {
                 const initialValue = {};
-                let i = 0
-                return array.reduce((obj, item) => {
-                    i = i + 1
-                    if (i <= array.length - 3) {
-                        return {
-                            ...obj,
-                            [item[key]]: item,
-                        };
-                    } else {
-                        let objkey = `other${(parseInt(array.length) - i +1).toString()}`
-                        return {
-                            ...obj,
-                            [objkey]: item,
-
-                        }
-                    }
-
+                return array.reduce((obj, item, index) => {
+                    return {
+                        ...obj,
+                        [item[key]]: item,
+                    };
                 }, initialValue);
             };
 
@@ -82,12 +67,12 @@ export class ContactController {
         const all = req.body as ContactList
 
         try {
-            await this.contactService.deleteSocialMedia()
+            // await this.contactService.deleteSocialMedia()
 
             await this.contactService.editContact(all.contact.email, all.contact.phone);
             for (let soc in all.social_media) {
 
-                await this.contactService.editSocialMedia(all.social_media[soc].media, all.social_media[soc].name);
+                await this.contactService.editSocialMedia(all.social_media[soc].id, all.social_media[soc].media, all.social_media[soc].name);
             }
 
             res.json({ result: true })

@@ -23,9 +23,7 @@ export function BoardReductor(state: CustomBoard = initCustom, action: BoardActi
                 description: json.description
             }
         }else {
-            return {
-                ...state
-            }
+            return state
         }
     }
     return {

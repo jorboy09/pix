@@ -35,10 +35,10 @@ export default function EditPage() {
 
     useEffect(() => {
         dispatch(fetchUser(localStorage.getItem('token')));
-        // setProfile(`${process.env.REACT_APP_DO_SPACE_URL}/${profilePic}`);
-        // setCover(`${process.env.REACT_APP_DO_SPACE_URL}/${coverPic}`)
-        setProfile(`/creator_img/${profilePic}`);
-        setCover(`/creator_img/${coverPic}`)
+        setProfile(`${process.env.REACT_APP_DO_SPACE_URL}/${profilePic}`);
+        setCover(`${process.env.REACT_APP_DO_SPACE_URL}/${coverPic}`)
+        //setProfile(`/creator_img/${profilePic}`);
+        //setCover(`/creator_img/${coverPic}`)
     }, [dispatch])
 
     return (
@@ -99,7 +99,7 @@ export default function EditPage() {
                             <div className="all-colours">
                                 {themes.map((theme, index) => {
                                     return (
-                                        <div className="colours" onClick={() => setCT(index)} >
+                                        <div className="colours" style={{borderWidth: colour_theme == index ? 3 : 0, borderColor: '#000'}} onClick={() => setCT(index)} >
                                             {theme.map((colour, i) => {
                                                 return (
                                                     <div className="colour" style={{ backgroundColor: colour.colour }}></div>

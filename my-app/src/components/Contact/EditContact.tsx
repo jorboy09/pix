@@ -13,13 +13,7 @@ export function EditContact() {
 
     const dispatch = useDispatch();
 
-    const [formState, { label, text, email, number }] = useFormState(null, {
-        onChange(event, stateValues, nextStateValues) {
-            const { name, value } = event.target;
-
-        }
-    }
-    );
+    const [formState, { label, text, email, number }] = useFormState(null);
 
     useEffect(() => {
 
@@ -41,7 +35,7 @@ export function EditContact() {
         for (let soc in social_media) {
             if (soc === 'other1' || soc === 'other2' || soc === 'other3') {
                 i += 1
-                formState.setField(`other${i}`, social_media[soc]?.media)
+                formState.setField(`other${i}`, social_media[soc]?.custom_name)
                 formState.setField(`other${i}_socialmediaacc`, social_media[soc]?.name)
 
             }
@@ -58,19 +52,19 @@ export function EditContact() {
                 phone: formState.values.phone,
             },
             social_media: {
-                instagram: { id: null, media: 'instagram', name: formState.values.instagram },
-                facebook: { id: null, media: 'facebook', name: formState.values.facebook },
-                youtube: { id: null, media: 'youtube', name: formState.values.youtube },
-                spotify: { id: null, media: 'spotify', name: formState.values.spotify },
-                soundcloud: { id: null, media: 'soundcloud', name: formState.values.soundcloud },
-                snapchat: { id: null, media: 'snapchat', name: formState.values.snapchat },
-                twitter: { id: null, media: 'twitter', name: formState.values.twitter },
-                pinterest: { id: null, media: 'pinterest', name: formState.values.pinterest },
-                linkedin: { id: null, media: 'linkedin', name: formState.values.linkedin },
-                mewe: { id: null, media: 'mewe', name: formState.values.mewe },
-                other1: { id: null, media: formState.values.other1, name: formState.values.other1_socialmediaacc },
-                other2: { id: null, media: formState.values.other2, name: formState.values.other2_socialmediaacc },
-                other3: { id: null, media: formState.values.other3, name: formState.values.other3_socialmediaacc },
+                instagram: { id: social_media.instagram?.id, name: formState.values.instagram },
+                facebook:   { id: social_media.facebook?.id, name: formState.values.facebook },
+                youtube:    { id: social_media.youtube?.id, name: formState.values.youtube },
+                spotify:    { id: social_media.spotify?.id, name: formState.values.spotify },
+                soundcloud: { id: social_media.soundcloud?.id, name: formState.values.soundcloud },
+                snapchat:   { id: social_media.snapchat?.id, name: formState.values.snapchat },
+                twitter:    { id: social_media.twitter?.id, name: formState.values.twitter },
+                pinterest:  { id: social_media.pinterest?.id, name: formState.values.pinterest },
+                linkedin:   { id: social_media.linkedin?.id, name: formState.values.linkedin },
+                mewe:       { id: social_media.mewe?.id, name: formState.values.mewe },
+                other1: { id: social_media.other1?.id, media: formState.values.other1, name: formState.values.other1_socialmediaacc },
+                other2: { id: social_media.other2?.id, media: formState.values.other2, name: formState.values.other2_socialmediaacc },
+                other3: { id: social_media.other3?.id, media: formState.values.other3, name: formState.values.other3_socialmediaacc },
 
             }
         }

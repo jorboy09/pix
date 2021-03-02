@@ -21,9 +21,9 @@ export function Deployment() {
                 <div className={style.header}>
                     <img src={arrow_left} alt='' onClick={() => page !== 0 ? setPage(page - 1) : null} style={page === 0 ? { visibility: 'hidden' } : {}} />
                     <div>
-                        {page === 0 ? '準備' :
-                            page === 1 ? 'GitLab' :
-                                page === 2 ? 'DigitalOcean ~ 自訂網域名稱(1/2)' :
+                        {page === 0 && '準備' }
+                        {page === 1 && 'GitLab' }
+                               { page === 2 ? 'DigitalOcean ~ 自訂網域名稱(1/2)' :
                                     page === 3 ? 'DigitalOcean ~ 自訂網域名稱(2/2)' :
                                         page === 4 ? 'Spaces(1/2)' :
                                             page === 5 ? 'Spaces(2/2)' :
@@ -34,10 +34,10 @@ export function Deployment() {
                                                                 page === 10 ? 'Droples(2/5)' :
                                                                     page === 11 ? 'Droples(3/5)' :
                                                                         page === 12 ? 'Droples(4/5)' :
-                                                                            page === 13 ? 'Droples(5/5)' :
-                                                                                page === 14 ? '留底少少資料去做推介啦~' : null}
+                                                                             'Droples(5/5)' }
+                                                                                 {/* page === 14 ? '留底少少資料去做推介啦~' : null} */}
                     </div>
-                    <img src={arrow_right} alt='' onClick={() => page !== 13 ? setPage(page + 1) : dispatch(push("/RegisterPage"))} style={/*page === 13 ? { visibility: 'hidden' } : */{}} />
+                    <img src={arrow_right} alt='' onClick={() => page !== 12 ? setPage(page + 1) : null} style={page === 13 ? { visibility: 'hidden' } :{}} />
                 </div>
                 {page <= 0 ?
                     <div className={style.instruction}>
@@ -201,7 +201,7 @@ export function Deployment() {
                                                                             </div>
                                                                         </p>
                                                                         <p>打曬之後，就㩒 Ctrl + X，再㩒Enter就完成喇。</p>
-                                                                    </div> : page === 13 ?
+                                                                    </div> : 
                                                                         <div className={style.instruction}>
                                                                             <p>之後係返出面揀左邊嘅Networking。喺Domains 底下㩒自己個網域名稱。</p>
                                                                             <p>喺Create new record底下揀 A 標籤，喺Hostname到打api，喺Will direct to 揀返你個Droplet。㩒Create Record。</p>
@@ -224,57 +224,58 @@ export function Deployment() {
                                                                                 </div>
                                                                             </p>
                                                                             <p>恭喜曬，你成功擁有屬於自己嘅專頁同網頁喇~~~</p>
-                                                                        </div> :
-                                                                        <div className={style.reference}>
-                                                                            <form className={style.reference_form} onSubmit={async (event) => {
-                                                                                event.preventDefault()
-                                                                                try {
-                                                                                    const initRes = await fetch(urljoin(`${process.env.REACT_APP_BACKEND_URL}`, '/newDomainInit'), {
-                                                                                        method: 'post',
-                                                                                        headers: {
-                                                                                            'Content-Type': 'application/json'
-                                                                                        },
-                                                                                        body: JSON.stringify({ api: api })
-                                                                                    })
-                                                                                    const initjson = await initRes.json()
-                                                                                    if (initjson.result) {
-                                                                                        const updateRes = await fetch(urljoin(`${process.env.REACT_APP_BACKEND_URL}`, '/updateAllDomain'), {
-                                                                                            method: 'post',
-                                                                                            headers: {
-                                                                                                'Content-Type': 'application/json'
-                                                                                            },
-                                                                                            body: JSON.stringify({ creator: creator, front: front, api: api })
-                                                                                        })
-                                                                                        const updatejson = await updateRes.json()
-                                                                                        if (updatejson.result) {
-                                                                                            alert('成功！')
-                                                                                        }else{
-                                                                                            alert('失敗！睇下有冇打錯啦~')
-                                                                                        }
-                                                                                    }else{
-                                                                                        alert('失敗！睇下有冇打錯啦~')
-                                                                                    }
-                                                                                } catch (e) {
-                                                                                    alert('失敗！睇下有冇打錯啦~')
-                                                                                }
-                                                                            }
-                                                                            }>
-                                                                                係你走之前，留底少少你專頁嘅資料啦(冇得改㗎~)：
-                                                                                <div>
-                                                                                    <div className={style.label}>名字︰</div>
-                                                                                    <input type='text' value={creator} onChange={(event) => setCreator(event.currentTarget.value)}></input>
-                                                                                </div>
-                                                                                <div>
-                                                                                    <div className={style.label}><div>專頁網址︰</div><div>(例如https://abcdefg.xyz)</div></div>
-                                                                                    <input type='text' value={front} onChange={(event) => setFront(event.currentTarget.value)}></input>
-                                                                                </div>
-                                                                                <div>
-                                                                                    <div className={style.label}><div>專頁嘅Droplet網址︰</div><div>(例如https://api.abcdefg.xyz)</div></div>
-                                                                                    <input type='text' value={api} onChange={(event) => setApi(event.currentTarget.value)}></input>
-                                                                                </div>
-                                                                                <button className={style.submit} type='submit'>留低</button>
-                                                                            </form>
-                                                                        </div>}
+                                                                        </div>
+                                                                        // <div className={style.reference}>
+                                                                        //     <form className={style.reference_form} onSubmit={async (event) => {
+                                                                        //         event.preventDefault()
+                                                                        //         try {
+                                                                        //             const initRes = await fetch(urljoin(`${process.env.REACT_APP_BACKEND_URL}`, '/newDomainInit'), {
+                                                                        //                 method: 'post',
+                                                                        //                 headers: {
+                                                                        //                     'Content-Type': 'application/json'
+                                                                        //                 },
+                                                                        //                 body: JSON.stringify({ api: api })
+                                                                        //             })
+                                                                        //             const initjson = await initRes.json()
+                                                                        //             if (initjson.result) {
+                                                                        //                 const updateRes = await fetch(urljoin(`${process.env.REACT_APP_BACKEND_URL}`, '/updateAllDomain'), {
+                                                                        //                     method: 'post',
+                                                                        //                     headers: {
+                                                                        //                         'Content-Type': 'application/json'
+                                                                        //                     },
+                                                                        //                     body: JSON.stringify({ creator: creator, front: front, api: api })
+                                                                        //                 })
+                                                                        //                 const updatejson = await updateRes.json()
+                                                                        //                 if (updatejson.result) {
+                                                                        //                     alert('成功！')
+                                                                        //                 }else{
+                                                                        //                     alert('失敗！睇下有冇打錯啦~')
+                                                                        //                 }
+                                                                        //             }else{
+                                                                        //                 alert('失敗！睇下有冇打錯啦~')
+                                                                        //             }
+                                                                        //         } catch (e) {
+                                                                        //             alert('失敗！睇下有冇打錯啦~')
+                                                                        //         }
+                                                                        //     }
+                                                                        //     }>
+                                                                        //         係你走之前，留底少少你專頁嘅資料啦(冇得改㗎~)：
+                                                                        //         <div>
+                                                                        //             <div className={style.label}>名字︰</div>
+                                                                        //             <input type='text' value={creator} onChange={(event) => setCreator(event.currentTarget.value)}></input>
+                                                                        //         </div>
+                                                                        //         <div>
+                                                                        //             <div className={style.label}><div>專頁網址︰</div><div>(例如https://abcdefg.xyz)</div></div>
+                                                                        //             <input type='text' value={front} onChange={(event) => setFront(event.currentTarget.value)}></input>
+                                                                        //         </div>
+                                                                        //         <div>
+                                                                        //             <div className={style.label}><div>專頁嘅Droplet網址︰</div><div>(例如https://api.abcdefg.xyz)</div></div>
+                                                                        //             <input type='text' value={api} onChange={(event) => setApi(event.currentTarget.value)}></input>
+                                                                        //         </div>
+                                                                        //         <button className={style.submit} type='submit'>留低</button>
+                                                                        //     </form>
+                                                                        // </div>
+                                                                        }
                 <div className={style.page_no}>{page + 1}</div>
             </div>
         </div>)

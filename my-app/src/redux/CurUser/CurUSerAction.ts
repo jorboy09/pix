@@ -77,7 +77,9 @@ export function fetchFan(token: string | null) {
             })
             const json = await res.json();
             if (json) {
-                dispatch(loginSuccess(json.token, false))
+                if (getState().login.isCreator === false) {
+                    dispatch(loginSuccess(json.token, false))
+                }
                 dispatch(getCurFan(json))
             }
         }
@@ -113,7 +115,7 @@ export function fetchCreators() {
             if (json.creators.length === 0) {
                 dispatch(push('/RegisterPage'))
             } else {
-                let path: '/creator-main' | '/main'
+                let path
                 const token = localStorage.getItem('token')
                 if (token !== null) dispatch(fetchIsCreator(token));
                 if (getState().login.isCreator) path = '/creator-main'

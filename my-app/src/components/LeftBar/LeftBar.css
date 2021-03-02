@@ -13,7 +13,6 @@
 
 .creator-left-bar{
     height: 100%;
-
 }
 
 .left-bar > button{
@@ -69,7 +68,7 @@
         flex-flow: wrap column;
         align-items: center;
         text-align: center;
-        height: 100%;
+        /* height: 100%; */
     }
 
     .middle-section .left-bar > *{

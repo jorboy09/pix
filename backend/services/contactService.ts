@@ -26,8 +26,8 @@ export class ContactService {
         await this.knex('social_media').delete()
     }
 
-    public editSocialMedia = async (media: string | undefined, name: string | undefined) => {
+    public editSocialMedia = async (id: number, media: string | undefined, name: string | undefined) => {
 
-        await this.knex('social_media').insert({ media: media, name: name }).where('media', media);
+        await this.knex('social_media').update({ custom_name: media, name: name }).where('id', id);
     }
 }

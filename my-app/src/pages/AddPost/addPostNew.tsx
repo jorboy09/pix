@@ -96,22 +96,22 @@ export function RenderPosts(props: lesPostes) {
                                 </div> :
                                     post.image_name !== null ?
                                         <div className="post-preview" style={{
-                                            backgroundImage: `url(/creator_img/${post.image_name})`
-                                            // backgroundImage: `url(${process.env.REACT_APP_DO_SPACE_URL}/${post.image_name})`
+                                            // backgroundImage: `url(/creator_img/${post.image_name})`
+                                            backgroundImage: `url(${process.env.REACT_APP_DO_SPACE_URL}/${post.image_name})`
                                         }}>
                                         </div> :
                                         post.video_name !== null ?
                                             <video className="post-preview" controls>
-                                                <source src={`/creator_video/${post.video_name}`} />
-                                                {/* <source src={`${process.env.REACT_APP_DO_SPACE_URL}/${post.video_name}`} /> */}
+                                                {/* <source src={`/creator_video/${post.video_name}`} /> */}
+                                                <source src={`${process.env.REACT_APP_DO_SPACE_URL}/${post.video_name}`} />
                                             </video> :
                                             post.audio_name !== null ?
                                                 <audio className="post-preview" style={{
                                                     height: `130px`,
 
                                                 }} controls>
-                                                    <source src={`/creator_audio/${post.audio_name}`} />
-                                                    {/* <source src={`${process.env.REACT_APP_DO_SPACE_URL}/${post.audio_name}`} /> */}
+                                                    {/* <source src={`/creator_audio/${post.audio_name}`} /> */}
+                                                    <source src={`${process.env.REACT_APP_DO_SPACE_URL}/${post.audio_name}`} />
                                                 </audio> :
                                                 null
                                 }
@@ -548,3 +548,4 @@ export function AddPostAudio() {
         </div>
     )
 }
+
